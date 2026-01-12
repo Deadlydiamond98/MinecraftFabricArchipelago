@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import PerGameCommonOptions, Choice, Range
+from Options import PerGameCommonOptions, Choice, Range, ItemSet
 
 
 # TRAP STUFF ###########################################################################################################
@@ -48,7 +48,6 @@ class RandomEffectTrapWeight(BaseTrapWeight):
     """
     display_name = "Random Status Effect Trap Weight"
 
-
 class StunTrapWeight(BaseTrapWeight):
     """
     Likelihood of a receiving a trap that temporarily stops movement of the player
@@ -78,6 +77,11 @@ class LiteratureTrapWeight(BaseTrapWeight):
     Likelihood of a receiving a trap that Opens Literature Pop-Ups
     """
     display_name = "Literature Trap Weight"
+
+# class EnabledMods(ItemSet):
+#     """List Compatible Mods here to include their checks in the game"""
+#     display_name = "Mods"
+#     rich_text_doc = True
 
 @dataclass
 class FMCOptions(PerGameCommonOptions):

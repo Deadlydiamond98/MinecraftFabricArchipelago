@@ -21,7 +21,18 @@ progression = [
 useful_index = len(progression) - 1
 
 useful = [
-    "Sword"
+    "5 Experience",
+    "10 Experience",
+    "1 Experience Level",
+    "2 Experience Levels",
+    "5 Experience Levels",
+    "4 Emeralds",
+    "8 Emeralds",
+    "Rotten Flesh",
+    "1 Arrow",
+    "8 Arrows",
+    "16 Arrows",
+    "32 Arrows"
 ]
 
 traps_index = len(useful) + useful_index

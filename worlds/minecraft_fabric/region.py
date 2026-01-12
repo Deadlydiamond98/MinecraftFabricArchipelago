@@ -5,7 +5,7 @@ if TYPE_CHECKING:
     from worlds.minecraft_fabric import FabricMinecraftWorld
 
 from BaseClasses import Region, Location, CollectionState
-from worlds.minecraft_fabric.locations import location_table
+from worlds.minecraft_fabric.locations import location_table, vanilla_start_locations
 
 
 def get_goal_condition(world: FabricMinecraftWorld, state: CollectionState):
@@ -14,18 +14,7 @@ def get_goal_condition(world: FabricMinecraftWorld, state: CollectionState):
 
 def create_regions(world):
     # Menu Region
-    create_locations(world, "Menu", [
-        "Test Location 1",
-        "Test Location 2",
-        "Test Location 3",
-        "Test Location 4",
-        "Test Location 5",
-        "Test Location 6",
-        "Test Location 7",
-        "Test Location 8",
-        "Test Location 9",
-        "Test Location 10"
-    ])
+    create_locations(world, "Menu", vanilla_start_locations)
 
     # Goal
     world.multiworld.completion_condition[world.player] = lambda state: get_goal_condition(world, state)

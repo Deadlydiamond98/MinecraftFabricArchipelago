@@ -1,15 +1,24 @@
 
-# TODO: Make this generate similar to items so my life is easier
+# Vanilla Start Locations (can be done with start items)
+vanilla_start_locations = [
+    "Stone Age",
+    "Monster Hunter",
+    "Light as a Rabbit",
+    "The Parrots and the Bats",
+    "You've Got a Friend in Me",
+    "Whatever Floats Your Goat!",
+    "Best Friends Forever",
+    "A Seedy Place"
+]
 
-location_table = {
-    "Test Location 1": 1,
-    "Test Location 2": 2,
-    "Test Location 3": 3,
-    "Test Location 4": 4,
-    "Test Location 5": 5,
-    "Test Location 6": 6,
-    "Test Location 7": 7,
-    "Test Location 8": 8,
-    "Test Location 9": 9,
-    "Test Location 10": 10,
-}
+def get_location_table():
+    table = {}
+    table.update(add_locations(table, vanilla_start_locations))
+    return table
+
+def add_locations(table: dict[str, int], locations: list[str]):
+    return {
+        name: (index + len(table) + 1) for index, name in enumerate(locations)
+    }
+
+location_table = get_location_table()
