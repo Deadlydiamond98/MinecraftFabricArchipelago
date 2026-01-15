@@ -30,6 +30,19 @@ class FabricMinecraftWorld(World):
         create_regions(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
+        from Utils import visualize_regions
+        state = self.multiworld.get_all_state()
+        state.update_reachable_regions(self.player)
+
+        reachable_regions = state.reachable_regions[self.player]
+        unreachable_regions: set[Region] = set()  # type: ignore
+        for regionb in self.multiworld.regions:
+            if regionb not in reachable_regions:
+                unreachable_regions.add(regionb)
+
+        visualize_regions(self.get_region("Menu"), f"{self.player_name}_world.puml", show_entrance_names=True,
+                          regions_to_highlight=unreachable_regions)
+
         return {
             "randomize_swim": self.options.randomize_swim.value,
             "randomize_sprint": self.options.randomize_sprint.value
