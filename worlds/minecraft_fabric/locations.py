@@ -123,7 +123,9 @@ vanilla = [
     "Hot Topic",
     "Time to Farm!",
     "Bake Bread",
-    "Time to Strike!"
+    "Time to Strike!",
+    "The Lie",
+    "Delicious Fish"
 ]
 
 

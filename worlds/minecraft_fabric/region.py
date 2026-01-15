@@ -13,6 +13,11 @@ from worlds.minecraft_fabric.locations import location_table
 # Create Regions #######################################################################################################
 ########################################################################################################################
 
+def get_goal_condition(world, state):
+    # Placeholder Win Condition TODO: Make actual goal
+    return canAccessEnd(world, state) and canSummonWither(world, state)
+
+
 def create_regions(world: FabricMinecraftWorld):
     # Menu Region (always available)
     create_locations_hard(world, "Menu", [
@@ -125,7 +130,8 @@ def create_regions(world: FabricMinecraftWorld):
     create_locations(world, "Bucket", [
         "Bukkit Bukkit",
         "Birthday Song",
-        "Hot Stuff"
+        "Hot Stuff",
+        "The Lie"
     ])
 
     create_locations(world, "CopperOre", [
@@ -136,6 +142,10 @@ def create_regions(world: FabricMinecraftWorld):
         "Fishy Business"
     ], [
         "A Complete Catalogue"
+    ])
+
+    create_locations(world, "FishingAndSmelt", [
+        "Delicious Fish"
     ])
 
     create_locations(world, "RequiresNetherite", [
@@ -272,6 +282,8 @@ def create_regions(world: FabricMinecraftWorld):
         "The End... Again..."
     ])
 
+    world.multiworld.completion_condition[world.player] = lambda state: get_goal_condition(world, state)
+
 
 ########################################################################################################################
 # Connect Entrances ####################################################################################################
@@ -279,6 +291,7 @@ def create_regions(world: FabricMinecraftWorld):
 
 def connect_entrances(world: FabricMinecraftWorld) -> None:
 
+    connect(world, "Menu", "FishingAndSmelt", lambda state: canSmelt(world, state) and state.has("Fishing Rod Recipes", world.player))
     connect(world, "Menu", "NeedsFurnace", lambda state: canSmelt(world, state))
     connect(world, "Menu", "RequiresNetherite", lambda state: canMakeNetherite(world, state))
     connect(world, "Menu", "Enchanting", lambda state: state.has("Enchanting", world.player))
@@ -388,10 +401,10 @@ def canUseBeacon(world: FabricMinecraftWorld, state: CollectionState):
 # End Conditions
 
 def canAccessEnd(world: FabricMinecraftWorld, state: CollectionState):
-    return state.has("Eye of Ender Recipes", world.player)
+    return state.has("Eye of Ender Recipes", world.player) and canAccessNether(world, state)
 
 def canBottleDragonBreath(world: FabricMinecraftWorld, state: CollectionState):
-    return canAccessEnd(world, state) and check_for_items(world, state, ["Progressive Smelting", "Glass Bottle Recipes"])
+    return canRespawnEnderDragon(world, state) and state.has("Glass Bottle Recipes", world.player)
 
 def canRespawnEnderDragon(world: FabricMinecraftWorld, state: CollectionState):
     return canAccessEnd(world, state) and canAccessNether(world, state) and state.has("Progressive Smelting", world.player)

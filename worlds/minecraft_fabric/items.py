@@ -38,7 +38,6 @@ bl_progression = [
     "Enchanting",
     "Smithing",
     # Recipe
-    "Ore Compression Recipes",
     "Bucket Recipes",
     "Flint and Steel Recipes",
     "Minecart Recipes",
