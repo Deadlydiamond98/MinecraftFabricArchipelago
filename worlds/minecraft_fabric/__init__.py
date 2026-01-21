@@ -55,6 +55,8 @@ class FabricMinecraftWorld(World):
             "goal_condition": self.options.goal_condition.value,
             # Advancements Needed to Goal
             "advancements_to_goal": min(advancements, self.options.advancements_required_for_goal.value),
+            "exclude_hard": self.options.exclude_hard_advancements.value,
+            "exclude_exploration": self.options.exclude_exploration_advancements.value,
             # Rubies
             "rubies_to_goal": self.options.percentage_of_rubies_needed.value,
             "total_rubies": self.max_ruby_count,
