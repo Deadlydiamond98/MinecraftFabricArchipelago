@@ -1,148 +1,67 @@
-# [Archipelago](https://archipelago.gg) ![Discord Shield](https://discordapp.com/api/guilds/731205301247803413/widget.png?style=shield) | [Install](https://github.com/ArchipelagoMW/Archipelago/releases)
+> [!WARNING]
+> Right now this mod is still in a very early stage, so do keep in mind that this mod could generate a Randomized Game that is unbeatable!
 
-Archipelago provides a generic framework for developing multiworld capability for game randomizers. In all cases,
-presently, Archipelago is also the randomizer itself.
 
-Currently, the following games are supported:
+# Archipelago Mod
 
-* The Legend of Zelda: A Link to the Past
-* Factorio
-* Subnautica
-* Risk of Rain 2
-* The Legend of Zelda: Ocarina of Time
-* Timespinner
-* Super Metroid
-* Secret of Evermore
-* Final Fantasy
-* VVVVVV
-* Raft
-* Super Mario 64
-* Meritous
-* Super Metroid/Link to the Past combo randomizer (SMZ3)
-* ChecksFinder
-* Hollow Knight
-* The Witness
-* Sonic Adventure 2: Battle
-* Starcraft 2
-* Donkey Kong Country 3
-* Dark Souls 3
-* Super Mario World
-* Pokémon Red and Blue
-* Hylics 2
-* Overcooked! 2
-* Zillion
-* Lufia II Ancient Cave
-* Blasphemous
-* Wargroove
-* Stardew Valley
-* The Legend of Zelda
-* The Messenger
-* Kingdom Hearts 2
-* The Legend of Zelda: Link's Awakening DX
-* Adventure
-* DLC Quest
-* Noita
-* Undertale
-* Bumper Stickers
-* Mega Man Battle Network 3: Blue Version
-* Muse Dash
-* DOOM 1993
-* Terraria
-* Lingo
-* Pokémon Emerald
-* DOOM II
-* Shivers
-* Heretic
-* Landstalker: The Treasures of King Nole
-* Final Fantasy Mystic Quest
-* TUNIC
-* Kirby's Dream Land 3
-* Celeste 64
-* Castlevania 64
-* A Short Hike
-* Yoshi's Island
-* Mario & Luigi: Superstar Saga
-* Bomb Rush Cyberfunk
-* Aquaria
-* Yu-Gi-Oh! Ultimate Masters: World Championship Tournament 2006
-* A Hat in Time
-* Old School Runescape
-* Kingdom Hearts 1
-* Mega Man 2
-* Yacht Dice
-* Faxanadu
-* Saving Princess
-* Castlevania: Circle of the Moon
-* Inscryption
-* Civilization VI
-* The Legend of Zelda: The Wind Waker
-* Jak and Daxter: The Precursor Legacy
-* Super Mario Land 2: 6 Golden Coins
-* shapez
-* Paint
-* Celeste (Open World)
-* Choo-Choo Charles
-* APQuest
-* Satisfactory
-* EarthBound
+This is the "Archipelago Mod," a mod that allows users to connect their Minecraft Game to the Archipelago multiworld multi-game randomizer in order to play Randomizers with multiple games, and/or multiple people!
 
-For setup and instructions check out our [tutorials page](https://archipelago.gg/tutorial/).
-Downloads can be found at [Releases](https://github.com/ArchipelagoMW/Archipelago/releases), including compiled
-windows binaries.
+Note: The mod sends information from your game to Archipelago to work!
 
-## History
+    Advancements the Player Unlocks
+    Players who have died
+    Player Inventory Contents
+    Player Messages in chat (this is used for talking to other players while playing or running commands on the Archipelago Server, but can be toggled on/off in the configs if desired)
 
-Archipelago is built upon a strong legacy of brilliant hobbyists. We want to honor that legacy by showing it here.
-The repositories which Archipelago is built upon, inspired by, or otherwise owes its gratitude to are:
+## What does this mod do?
 
-* [bonta0's MultiWorld](https://github.com/Bonta0/ALttPEntranceRandomizer/tree/multiworld_31)
-* [AmazingAmpharos' Entrance Randomizer](https://github.com/AmazingAmpharos/ALttPEntranceRandomizer)
-* [VT Web Randomizer](https://github.com/sporchia/alttp_vt_randomizer)
-* [Dessyreqt's alttprandomizer](https://github.com/Dessyreqt/alttprandomizer)
-* [Zarby89's](https://github.com/Ijwu/Enemizer/commits?author=Zarby89)
-  and [sosuke3's](https://github.com/Ijwu/Enemizer/commits?author=sosuke3) contributions to Enemizer, which make up the
-  vast majority of Enemizer contributions.
+This mod Interacts with Archipelago to allow for multiple games to communicate with eachother in a Randomizer.
 
-We recognize that there is a strong community of incredibly smart people that have come before us and helped pave the
-path. Just because one person's name may be in a repository title does not mean that only one person made that project
-happen. We can't hope to perfectly cover every single contribution that lead up to Archipelago, but we hope to honor
-them fairly.
+Everytime an Advancement is unlocked, an Item is sent to either you, or another persons game.
 
-### Path to the Archipelago
+The Items can be unlocked for Minecraft are Recipes (such as tools, armor, and weapons) and Abilities (such as sleeping, smelting, and trading); These items can be locked behind locations in other peoples games, or behind advancements in Minecraft.
 
-Archipelago was directly forked from bonta0's `multiworld_31` branch of ALttPEntranceRandomizer (this project has a
-long legacy of its own, please check it out linked above) on January 12, 2020. The repository was then named to
-_MultiWorld-Utilities_ to better encompass its intended function. As Archipelago matured, then known as
-"Berserker's MultiWorld" by some, we found it necessary to transform our repository into a root level repository
-(as opposed to a 'forked repo') and change the name (which came later) to better reflect our project.
+For more information on what Archipelago is or how it works, you can read HERE!
 
-## Running Archipelago
+## How do I set this mod up?
 
-For most people, all you need to do is head over to
-the [releases page](https://github.com/ArchipelagoMW/Archipelago/releases), then download and run the appropriate
-installer, or AppImage for Linux-based systems.
+In order to play with this mod, you will need to generate an Archipelago Game, which you can read about doing by clicking HERE! (Note: you will need the latest version of the AP World for this!)
 
-If you are a developer or are running on a platform with no compiled releases available, please see our doc on
-[running Archipelago from source](docs/running%20from%20source.md).
+Once you have an Archipelago Game setup, you can open up your game (with this mod installed of course). The next instructions will differ slightly depending on if you want to play Single Player or Multiplayer.
 
-## Related Repositories
+### Setting up for Single Player
 
-This project makes use of multiple other projects. We wouldn't be here without these other repositories and the
-contributions of their developers, past and present.
+In order to setup for Single Player, all you need to do is Create a New World, and fill in the required prompts for the AP Server, Slot Name, and Password.
 
-* [z3randomizer](https://github.com/ArchipelagoMW/z3randomizer)
-* [Enemizer](https://github.com/Ijwu/Enemizer)
-* [Ocarina of Time Randomizer](https://github.com/TestRunnerSRL/OoT-Randomizer)
+Screenshot of World Creation showing new Fields for inputting the Server, Slot, and Password
 
-## Contributing
+ 
 
-To contribute to Archipelago, including the WebHost, core program, or by adding a new game, see our
-[Contributing guidelines](/docs/contributing.md).
+In the event that an incorrect AP Server, Slot Name, or Password is entered, or the Displays a popup that it failed to connect to an Archipelago Server, you can either generate a new world, or you can follow the instructions for Multiplayer.
 
-## FAQ
+### Setting up for Multiplayer
 
-For Frequently asked questions, please see the website's [FAQ Page](https://archipelago.gg/faq/en/).
+The instructions for playing on a Multiplayer World are the same up until you join the world. Once you're in the world, you can run the command /connect or /archipelago connect, and fill in the necessary information.
 
-## Code of Conduct
+Screenshot of World Creation showing new Fields for inputting the Server, Slot, and Password
 
-Please refer to our [code of conduct](/docs/code_of_conduct.md).
+ 
+
+If a World was already generated in Single Player before being put on the server, the Server should connect automatically when the world starts.
+
+## Does this currently support other Mods?
+
+Currently this mod doesn't impact other mods, and only randomizes thing within the Vanilla Game, however, Mod Support is a planned feature, and will be coming very soon!
+
+Once Mod Support is added, Information regarding that will be added here.
+
+## Will this mod be ported to Forge?
+
+No, there are no plans to port this to Forge. However, Sinytra Connector can allow Fabric Mods to be run on Forge.
+
+    > [!WARNING]
+    > Currently there is a crash when trying to run this with Sinytra Connector, but this will be fixed in the very near future.
+
+Will this be ported to Newer Versions?
+
+There are no plans to do that at the current moment. I wouldn't be against doing so, but it isn't likely to happen for a long time.
