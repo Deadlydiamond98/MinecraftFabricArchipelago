@@ -2,66 +2,84 @@
 > Right now this mod is still in a very early stage, so do keep in mind that this mod could generate a Randomized Game that is unbeatable!
 
 
-# Archipelago Mod
+# [Archipelago](https://archipelago.gg/) Randomizer for Minecraft
 
-This is the "Archipelago Mod," a mod that allows users to connect their Minecraft Game to the Archipelago multiworld multi-game randomizer in order to play Randomizers with multiple games, and/or multiple people!
+This mod is inspired by [Minecraft_AP_Randomizer](https://github.com/jacobmix/Minecraft_AP_Randomizer), but is written in Fabric instead of Forge. It also has additional features such as easier setup, and the ability to play in singleplayer mode.
 
-Note: The mod sends information from your game to Archipelago to work!
+This repo contains the .apworld file to install in the Archipelago launcher. The Fabric mod is [located here](https://github.com/Deadlydiamond98/MinecraftFabricArchipelagoMod).
 
-    Advancements the Player Unlocks
-    Players who have died
-    Player Inventory Contents
-    Player Messages in chat (this is used for talking to other players while playing or running commands on the Archipelago Server, but can be toggled on/off in the configs if desired)
+## Items
 
-## What does this mod do?
+Item recipes, and some mechanics (like jumping, swimming, and running) are locked behind items found by you/other players. Filler items are also included such as experience drops, arrows, planks, and food.
 
-This mod Interacts with Archipelago to allow for multiple games to communicate with eachother in a Randomizer.
 
-Everytime an Advancement is unlocked, an Item is sent to either you, or another persons game.
+## Locations (sending items)
 
-The Items can be unlocked for Minecraft are Recipes (such as tools, armor, and weapons) and Abilities (such as sleeping, smelting, and trading); These items can be locked behind locations in other peoples games, or behind advancements in Minecraft.
+Locations in this randomizer are represented by various Minecraft achievements.
 
-For more information on what Archipelago is or how it works, you can read HERE!
+## Setting it Up
 
-## How do I set this mod up?
+1. Follow the [Archipelago Setup Guide](https://archipelago.gg/tutorial/Archipelago/setup_en) to install the launcher
+2. Download the latest [AP World](https://github.com/Deadlydiamond98/MinecraftFabricAPWorld/releases) for this mod
+3. Use the Options Creator in Archipelago launcher to generate your YAML config
+3. Once you've gathered all the YAML configs, and started the server, you can open up your game (with this mod installed of course). The next instructions will differ slightly depending on if you want to play singleplayer or multiplayer
 
-In order to play with this mod, you will need to generate an Archipelago Game, which you can read about doing by clicking HERE! (Note: you will need the latest version of the AP World for this!)
+### Singleplayer
 
-Once you have an Archipelago Game setup, you can open up your game (with this mod installed of course). The next instructions will differ slightly depending on if you want to play Single Player or Multiplayer.
+1. Install [Prism Launcher](https://prismlauncher.org/) (or your preferred MC launcher if you haven't already)
+2. Create a new `1.20.1` instance running Fabric `0.18.4`
+3. Install the [Archipelago Mod](https://modrinth.com/mod/archipelago-mod) for Minecraft
+4. Create a new single player world, filling in Archipelago server address, port, and password (if needed)
 
-### Setting up for Single Player
-
-In order to setup for Single Player, all you need to do is Create a New World, and fill in the required prompts for the AP Server, Slot Name, and Password.
-
-Screenshot of World Creation showing new Fields for inputting the Server, Slot, and Password
-
- 
+![Screenshot of World Creation showing new Fields for inputting the Server, Slot, and Password](screenshots/singleplayer_setup.png)
 
 In the event that an incorrect AP Server, Slot Name, or Password is entered, or the Displays a popup that it failed to connect to an Archipelago Server, you can either generate a new world, or you can follow the instructions for Multiplayer.
 
-### Setting up for Multiplayer
+### Multiplayer
 
 The instructions for playing on a Multiplayer World are the same up until you join the world. Once you're in the world, you can run the command /connect or /archipelago connect, and fill in the necessary information.
 
-Screenshot of World Creation showing new Fields for inputting the Server, Slot, and Password
+![Screenshot of World Creation showing new Fields for inputting the Server, Slot, and Password
+](screenshots/multiplayer_setup.png)
 
- 
 
 If a World was already generated in Single Player before being put on the server, the Server should connect automatically when the world starts.
 
-## Does this currently support other Mods?
+
+#### Docker Compose Server Example
+
+```yaml
+services:
+  mc-archipelago:
+    image: itzg/minecraft-server:latest
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      VERSION: "1.20.1"
+      MODRINTH_PROJECTS: |-
+        archipelago-mod
+      MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
+    volumes:
+      - "./data:/data"
+```
+
+## Does this support other Mods?
 
 Currently this mod doesn't impact other mods, and only randomizes thing within the Vanilla Game, however, Mod Support is a planned feature, and will be coming very soon!
 
 Once Mod Support is added, Information regarding that will be added here.
 
-## Will this mod be ported to Forge?
+## Will this be ported to Forge?
 
 No, there are no plans to port this to Forge. However, Sinytra Connector can allow Fabric Mods to be run on Forge.
 
-    > [!WARNING]
-    > Currently there is a crash when trying to run this with Sinytra Connector, but this will be fixed in the very near future.
+> [!WARNING]
+> Currently there is a crash when trying to run this with Sinytra Connector, but this will be fixed in the very near future.
 
-Will this be ported to Newer Versions?
+## Will this be ported to Newer Versions?
 
 There are no plans to do that at the current moment. I wouldn't be against doing so, but it isn't likely to happen for a long time.
