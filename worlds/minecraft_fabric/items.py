@@ -66,6 +66,23 @@ useful = [
     "Lapis Lazuli",
     "Ender Pearls",
 
+    # ENCHANTS
+    "Looting III",
+    "Sharpness III",
+    "Silk Touch",
+    "Channeling",
+    "Piercing IV",
+    "Unbreaking I",
+    "Unbreaking II",
+    "Unbreaking III",
+
+    # POTIONS
+    "Potion of Fire Resistance",
+    "Potion of Swiftness",
+    "Potion of Luck",
+    "Potion of Healing",
+    "Strong Potion of Healing",
+
     # Ore
     "Iron Ore Vein",
     "Gold Ore Vein",
@@ -106,9 +123,9 @@ filler = [
     "Large Coal Ore Vein",
 
     # Foods
-    "Random Fruit",
-    "Golden Carrot",
-    "Baked Potato",
+    "Apples",
+    "Golden Carrots",
+    "Baked Potatos",
     "Cookies",
 
     "Steak",
@@ -120,7 +137,10 @@ filler = [
     "Tropical Fish",
     "Pufferfish",
     "Poisonous Potato",
-    "Suspicious Stew"
+    "Suspicious Stew",
+    # MISC
+    "Random Dye",
+    "Strong Potion of Harming"
 ]
 
 traps_index = len(filler) + filler_index

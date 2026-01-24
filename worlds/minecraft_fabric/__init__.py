@@ -64,6 +64,7 @@ class FabricMinecraftWorld(World):
             "deathlink": self.options.deathlink_enabled.value,
             # Other Options
             "keep_inventory": self.options.keep_inventory.value,
+            "itemsanity": self.options.itemsanity.value,
             "randomize_swim": self.options.randomize_swim.value,
             "randomize_sprint": self.options.randomize_sprint.value,
             "randomize_jump": self.options.randomize_jump.value,
