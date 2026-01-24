@@ -71,7 +71,7 @@ class ExcludeExplorationAdvancements(Toggle):
     Makes it so Advancements that require a lot of exploration (such as "Sound of Music" or "Whatever Floats Your Goat!")
     will not have checks
     """
-    display_name = "Exclude Exploration Advancements"
+    display_name = "Exclude Exploration Locations"
     default = False
 
 class SpeedRunnerMode(Toggle):
@@ -113,7 +113,15 @@ class KeepInventory(Toggle):
     display_name = "Keep Inventory"
     default = True
 
+class Itemsanity(Toggle):
+    """
+    Enables "Itemsanity" which causes items obtainable in Survival to be checks
 
+    (Not All Items become Itemsanity Checks, for the list of items without checks, click the link)
+    (https://docs.google.com/document/d/1igxLuOAG1fHOQkJi1UyKVB2nz2pa8gu4DX2h61NtWic/edit?tab=t.0)
+    """
+    display_name = "Itemsanity"
+    default = False
 
 
 ########################################################################################################################
@@ -250,6 +258,7 @@ class FMCOptions(PerGameCommonOptions):
     percentage_of_rubies_needed: RubyPercentageNeeded
     total_rubies: TotalRubiesInGame
     keep_inventory: KeepInventory
+    itemsanity: Itemsanity
     # Abilities
     randomize_swim: RandomizeSwim
     randomize_chests: RandomizeChestStorage

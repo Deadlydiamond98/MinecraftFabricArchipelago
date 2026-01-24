@@ -44,11 +44,11 @@ class FabricMinecraftWorld(World):
         # visualize_regions(self.get_region("Menu"), f"{self.player_name}_world.puml", show_entrance_names=True,
         #                   regions_to_highlight=unreachable_regions)
 
-
-        # TODO: This will need to be changed when Itemsanity Locations are added!!
         advancements = 0
-        for i in self.multiworld.get_locations(self.player):
-            advancements += 1
+
+        for name in self.multiworld.get_locations():
+            if not name.name.endswith("(Itemsanity)"):
+                advancements += 1
 
         return {
             # Base

@@ -103,6 +103,9 @@ def canUseNetheriteTools(world: FabricMinecraftWorld, state: CollectionState):
 def canWearLeatherArmor(world: FabricMinecraftWorld, state: CollectionState):
     return state.has("Progressive Armor", world.player)
 
+def canWearGoldArmor(world: FabricMinecraftWorld, state: CollectionState):
+    return canSmelt(world, state) and state.has("Progressive Armor", world.player, 2)
+
 def canWearIronArmor(world: FabricMinecraftWorld, state: CollectionState):
     return canSmelt(world, state) and state.has("Progressive Armor", world.player, 3)
 
