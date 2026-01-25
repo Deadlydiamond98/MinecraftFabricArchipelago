@@ -1,12 +1,13 @@
 import math
-from typing import Mapping, Any
+from typing import Mapping, Any, List
 
-from BaseClasses import ItemClassification, Item
+from BaseClasses import ItemClassification, Item, Location
+from Options import OptionError
 from worlds.AutoWorld import World
 from worlds.minecraft_fabric.items import item_table, useful_index, traps_index, bl_progression_index
 from worlds.minecraft_fabric.locations import location_table
 from worlds.minecraft_fabric.options import FMCOptions
-from worlds.minecraft_fabric.region import create_regions
+from worlds.minecraft_fabric.regions import create_regions
 
 
 class FabricMinecraftWorld(World):
@@ -21,11 +22,12 @@ class FabricMinecraftWorld(World):
 
     location_name_to_id = location_table
 
-    max_ruby_count = 0
-
 
     def __init__(self, multiworld, player):
         super().__init__(multiworld, player)
+        self.max_ruby_count = 0
+        self.itemsanity_locations = []
+        self.local_fill_amount = 0
 
     def create_regions(self):
         create_regions(self)
@@ -46,8 +48,8 @@ class FabricMinecraftWorld(World):
 
         advancements = 0
 
-        for name in self.multiworld.get_locations():
-            if not name.name.endswith("(Itemsanity)"):
+        for location in self.multiworld.get_locations():
+            if not location.name.endswith("(Itemsanity)"):
                 advancements += 1
 
         return {
@@ -76,6 +78,8 @@ class FabricMinecraftWorld(World):
 
     def create_items(self):
         total_items = len(self.multiworld.get_unfilled_locations(self.player))
+        self.local_fill_amount = math.floor(len(self.itemsanity_locations) * self.options.itemsanity_local_fill * 0.01)
+        total_items -= self.local_fill_amount
 
         # Progression Items ############################################################################################
 
@@ -110,6 +114,45 @@ class FabricMinecraftWorld(World):
             self.max_ruby_count = min(self.options.total_rubies.value, total_items)
             total_items = self.add_multiple_to_pool(0, self.max_ruby_count, total_items)
 
+        for item in self.fill_traps_and_junk(total_items):
+            self.multiworld.itempool.append(item)
+
+
+
+
+    def pre_fill(self) -> None:
+        location_map: List[Location] = [self.multiworld.get_location(loc, self.player) for loc in self.itemsanity_locations]
+        self.random.shuffle(location_map)
+        filler_size = self.local_fill_amount
+        filler_items = self.fill_traps_and_junk(filler_size)
+
+        while filler_size > 0:
+            if len(location_map) == 0:
+                raise OptionError("Another AP world is attempting to mess with Minecraft Fabric's prefill locations, please go politely inform them of this blunder")
+
+            location = location_map.pop()
+            if not location.locked:
+                location.place_locked_item(filler_items[filler_size - 1])
+                filler_size -= 1
+
+    def add_multiple_to_pool(self, index: int, count: int, total_items: int):
+        for i in range(count):
+            total_items = self.add_to_pool(index, total_items)
+        return total_items
+
+    def create_item_from_table(self, index: int):
+        return Item(item_table[index].name, item_table[index].item_type, item_table[index].item_id, self.player)
+
+    def add_to_pool(self, index: int, total_items: int):
+        self.multiworld.itempool.append(self.create_item_from_table(index))
+        total_items -= 1
+        return total_items
+
+    def add_trap_weight(self, index, weight):
+        return [item_table[index]] * weight
+
+    def fill_traps_and_junk(self, total_items: int):
+        junk_items = []
 
         # Trap Items ###################################################################################################
         trap_weights = []
@@ -127,24 +170,11 @@ class FabricMinecraftWorld(World):
 
         for i in range(trap_count):
             trap_item = self.random.choice(trap_weights)
-            self.multiworld.itempool.append(Item(trap_item.name, trap_item.item_type, trap_item.item_id, self.player))
+            junk_items.append(Item(trap_item.name, trap_item.item_type, trap_item.item_id, self.player))
             total_items -= 1
 
         # Filler Items #####################################################################################################
         while total_items > 0:
-            total_items = self.add_to_pool(self.random.randint(useful_index + 1, traps_index), total_items)
-
-    def add_multiple_to_pool(self, index: int, count: int, total_items: int):
-        for i in range(count):
-            total_items = self.add_to_pool(index, total_items)
-        return total_items
-
-    def add_to_pool(self, index: int, total_items: int):
-        self.multiworld.itempool.append(
-            Item(item_table[index].name, item_table[index].item_type, item_table[index].item_id, self.player)
-        )
-        total_items -= 1
-        return total_items
-
-    def add_trap_weight(self, index, weight):
-        return [item_table[index]] * weight
+            junk_items.append(self.create_item_from_table(self.random.randint(useful_index + 1, traps_index)))
+            total_items -= 1
+        return junk_items

@@ -123,6 +123,15 @@ class Itemsanity(Toggle):
     display_name = "Itemsanity"
     default = False
 
+class ItemsanityLocalFill(Range):
+    """
+    The Percentage of Itemsanity Checks that should only contain items from your world
+    """
+    display_name = "Itemsanity Local Fill"
+    range_start = 0
+    range_end = 100
+    default = 90
+
 
 ########################################################################################################################
 # ABILITIES ############################################################################################################
@@ -250,6 +259,7 @@ class FMCOptions(PerGameCommonOptions):
     # Goal Related Options
     goal_condition: GoalCondition
     randomizerDifficulty: RandomizerDifficulty
+    # Advancements
     advancements_required_for_goal: AdvancementsRequiredToGoal
     exclude_unreasonable_advancements: ExcludeUnreasonableAdvancements
     exclude_hard_advancements: ExcludeHardAdvancements
@@ -258,7 +268,9 @@ class FMCOptions(PerGameCommonOptions):
     percentage_of_rubies_needed: RubyPercentageNeeded
     total_rubies: TotalRubiesInGame
     keep_inventory: KeepInventory
+    # Itemsanity
     itemsanity: Itemsanity
+    itemsanity_local_fill: ItemsanityLocalFill
     # Abilities
     randomize_swim: RandomizeSwim
     randomize_chests: RandomizeChestStorage

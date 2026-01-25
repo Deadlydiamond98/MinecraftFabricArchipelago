@@ -40,8 +40,6 @@ def get_goal_condition(world, state):
    return canAccessVanillaEndGame(world, state)
 
 
-
-
 def create_regions(world: FabricMinecraftWorld):
    # Menu Region (always available)
    create_locations_advanced(world, "Menu", {
@@ -145,7 +143,6 @@ def create_regions(world: FabricMinecraftWorld):
        "Purple Wool (Itemsanity)": 5,
        "Blue Wool (Itemsanity)": 5,
        "Brown Wool (Itemsanity)": 5,
-       "Green Wool (Itemsanity)": 5,
        "Red Wool (Itemsanity)": 5,
        "Dandelion (Itemsanity)": 5,
        "Poppy (Itemsanity)": 5,
@@ -267,7 +264,6 @@ def create_regions(world: FabricMinecraftWorld):
        "Purple Carpet (Itemsanity)": 5,
        "Blue Carpet (Itemsanity)": 5,
        "Brown Carpet (Itemsanity)": 5,
-       "Green Carpet (Itemsanity)": 5,
        "Red Carpet (Itemsanity)": 5,
        "Sunflower (Itemsanity)": 5,
        "Lilac (Itemsanity)": 5,
@@ -291,7 +287,6 @@ def create_regions(world: FabricMinecraftWorld):
        "Purple Concrete (Itemsanity)": 5,
        "Blue Concrete (Itemsanity)": 5,
        "Brown Concrete (Itemsanity)": 5,
-       "Green Concrete (Itemsanity)": 5,
        "Red Concrete (Itemsanity)": 5,
        "White Concrete Powder (Itemsanity)": 5,
        "Orange Concrete Powder (Itemsanity)": 5,
@@ -306,7 +301,6 @@ def create_regions(world: FabricMinecraftWorld):
        "Purple Concrete Powder (Itemsanity)": 5,
        "Blue Concrete Powder (Itemsanity)": 5,
        "Brown Concrete Powder (Itemsanity)": 5,
-       "Green Concrete Powder (Itemsanity)": 5,
        "Red Concrete Powder (Itemsanity)": 5,
        "Polished Granite Stairs (Itemsanity)": 5,
        "Polished Diorite Stairs (Itemsanity)": 5,
@@ -443,7 +437,6 @@ def create_regions(world: FabricMinecraftWorld):
        "Purple Dye (Itemsanity)": 5,
        "Blue Dye (Itemsanity)": 5,
        "Brown Dye (Itemsanity)": 5,
-       "Green Dye (Itemsanity)": 5,
        "Red Dye (Itemsanity)": 5,
        "Bone Meal (Itemsanity)": 5,
        "Bone (Itemsanity)": 5,
@@ -481,7 +474,6 @@ def create_regions(world: FabricMinecraftWorld):
        "Purple Banner (Itemsanity)": 5,
        "Blue Banner (Itemsanity)": 5,
        "Brown Banner (Itemsanity)": 5,
-       "Green Banner (Itemsanity)": 5,
        "Red Banner (Itemsanity)": 5,
        "Beetroot (Itemsanity)": 5,
        "Beetroot Seeds (Itemsanity)": 5,
@@ -524,7 +516,6 @@ def create_regions(world: FabricMinecraftWorld):
        "Warped Fungus (Itemsanity)": 5,
        "Crimson Roots (Itemsanity)": 5,
        "Warped Roots (Itemsanity)": 5,
-       "Nether Sprouts (Itemsanity)": 5,
        "Weeping Vines (Itemsanity)": 5,
        "Twisting Vines (Itemsanity)": 5,
        "Crimson Slab (Itemsanity)": 5,
@@ -766,7 +757,13 @@ def create_regions(world: FabricMinecraftWorld):
        "Cooked Mutton (Itemsanity)": 5,
        "Smoker (Itemsanity)": 5,
        "Blast Furnace (Itemsanity)": 5,
-       "Campfire (Itemsanity)": 5
+       "Campfire (Itemsanity)": 5,
+       "Green Wool (Itemsanity)": 5,
+       "Green Carpet (Itemsanity)": 5,
+       "Green Concrete (Itemsanity)": 5,
+       "Green Concrete Powder (Itemsanity)": 5,
+       "Green Banner (Itemsanity)": 5,
+       "Green Dye (Itemsanity)": 5
    }, lambda state: canSmelt(world, state))
 
 
@@ -1081,7 +1078,6 @@ def create_regions(world: FabricMinecraftWorld):
        "Purple Bed (Itemsanity)": 5,
        "Blue Bed (Itemsanity)": 5,
        "Brown Bed (Itemsanity)": 5,
-       "Green Bed (Itemsanity)": 5,
        "Red Bed (Itemsanity)": 5
    }, lambda state: canSleep(world, state))
 
@@ -1627,6 +1623,18 @@ def create_regions(world: FabricMinecraftWorld):
    }, lambda state: canSleep(world, state) and canSwim(world, state))
 
 
+   # REQUIRES SLEEP AND SMELT
+   create_locations_and_connect(world, "HasSleep", "HasSleepAndSmelt", {
+       "Green Bed (Itemsanity)": 5
+   }, lambda state: canSleep(world, state) and canSmelt(world, state))
+
+
+   # REQUIRES SHEARS AND NETHER
+   create_locations_and_connect(world, "NetherAccess", "NetherAccessAndShears", {
+       "Nether Sprouts (Itemsanity)": 5
+   }, lambda state: canAccessNether(world, state) and canUseShears(world, state))
+
+
    world.multiworld.completion_condition[world.player] = lambda state: get_goal_condition(world, state)
 
 
@@ -1655,7 +1663,13 @@ def create_locations_advanced(world: FabricMinecraftWorld, region_name: str, loc
 
 def create_locations(world: FabricMinecraftWorld, region_name: str, locations: list[str]):
    region = Region(region_name, world.player, world.multiworld, region_name)
-   region.locations += [Location(world.player, name, location_table[name], region) for name in locations]
+
+   for name in locations:
+       location = Location(world.player, name, location_table[name], region)
+       if name.endswith("(Itemsanity)"):
+          world.itemsanity_locations.append(name)
+       region.locations.append(location)
+
    world.multiworld.regions.append(region)
 
 
@@ -1677,9 +1691,6 @@ def connect(world, source: str, target: str, rule=None, reach: Optional[bool] = 
 
 
    return connection if reach else None
-
-
-
 
 def create_locations_and_connect(world: FabricMinecraftWorld, region_name: str, new_region_name: str, locations: dict[str, int], rule=None, reach: Optional[bool] = False,
            rule_to_str: Optional[str] = None, ):
