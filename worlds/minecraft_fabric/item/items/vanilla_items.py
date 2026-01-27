@@ -14,6 +14,7 @@ vanilla_items = [
     needed("Progressive Smelting"),
     needed("Progressive Armor"),
     needed("Progressive Archery"),
+    needed("Progressive Dye Recipes"),
     # Ability
     needed_bl("Sleeping"),
     needed_bl("Wither Summoning"),
@@ -36,6 +37,7 @@ vanilla_items = [
     needed_bl("Glass Bottle Recipes"),
     needed_bl("Resource Compacting Recipes"),
     needed_bl("Shield Recipes"),
+    needed_bl("Bundle Recipes"),
     # USEFUL ###########################################################################################################
     # Materials
     useful("4 Emeralds"),
@@ -44,6 +46,8 @@ vanilla_items = [
     useful("Redstone Dust"),
     useful("Lapis Lazuli"),
     useful("Ender Pearls"),
+    # useful("Prismarine Shards"),
+    # useful("Prismarine Crystals"),
     # Enchants
     useful("Looting III"),
     useful("Sharpness III"),

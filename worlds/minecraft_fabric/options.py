@@ -2,7 +2,6 @@ from dataclasses import dataclass
 
 from Options import PerGameCommonOptions, Choice, Range, ItemSet, OptionSet, OptionGroup, Toggle
 
-
 ########################################################################################################################
 # GOAL CONDITION #######################################################################################################
 ########################################################################################################################
@@ -133,7 +132,6 @@ class ItemsanityLocalFill(Range):
     range_end = 98
     default = 90
 
-
 ########################################################################################################################
 # ABILITIES ############################################################################################################
 ########################################################################################################################
@@ -257,11 +255,6 @@ class TrapLink(Toggle):
     display_name = "TrapLink"
     default = False
 
-# class EnabledMods(OptionSet):
-#     """List Compatible Mods here to include their checks in the game"""
-#     display_name = "Mods"
-#     rich_text_doc = True
-
 @dataclass
 class FMCOptions(PerGameCommonOptions):
     # Goal Related Options
@@ -276,9 +269,10 @@ class FMCOptions(PerGameCommonOptions):
     percentage_of_rubies_needed: RubyPercentageNeeded
     total_rubies: TotalRubiesInGame
     keep_inventory: KeepInventory
-    # Itemsanity
+    # sanities
     itemsanity: Itemsanity
     itemsanity_local_fill: ItemsanityLocalFill
+    # killsanity: Killsanity
     # Abilities
     randomize_swim: RandomizeSwim
     randomize_chests: RandomizeChestStorage

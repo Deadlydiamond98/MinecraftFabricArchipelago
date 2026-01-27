@@ -14,7 +14,6 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
     create_locations_and_connect(world, "Menu", "MenuVanillaItemsanity", {
         "Dirt (Itemsanity)": 5,
         "Coarse Dirt (Itemsanity)": 5,
-        "Podzol (Itemsanity)": 5,
         "Rooted Dirt (Itemsanity)": 5,
         "Mud (Itemsanity)": 5,
         "Oak Planks (Itemsanity)": 5,
@@ -77,19 +76,6 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Sandstone (Itemsanity)": 5,
         "Chiseled Sandstone (Itemsanity)": 5,
         "Cut Sandstone (Itemsanity)": 5,
-        "White Wool (Itemsanity)": 5,
-        "Orange Wool (Itemsanity)": 5,
-        "Magenta Wool (Itemsanity)": 5,
-        "Light Blue Wool (Itemsanity)": 5,
-        "Yellow Wool (Itemsanity)": 5,
-        "Pink Wool (Itemsanity)": 5,
-        "Gray Wool (Itemsanity)": 5,
-        "Light Gray Wool (Itemsanity)": 5,
-        "Cyan Wool (Itemsanity)": 5,
-        "Purple Wool (Itemsanity)": 5,
-        "Blue Wool (Itemsanity)": 5,
-        "Brown Wool (Itemsanity)": 5,
-        "Red Wool (Itemsanity)": 5,
         "Dandelion (Itemsanity)": 5,
         "Poppy (Itemsanity)": 5,
         "Blue Orchid (Itemsanity)": 5,
@@ -197,19 +183,6 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Deepslate Brick Wall (Itemsanity)": 5,
         "Deepslate Tile Wall (Itemsanity)": 5,
         "Hay Bale (Itemsanity)": 5,
-        "White Carpet (Itemsanity)": 5,
-        "Orange Carpet (Itemsanity)": 5,
-        "Magenta Carpet (Itemsanity)": 5,
-        "Light Blue Carpet (Itemsanity)": 5,
-        "Yellow Carpet (Itemsanity)": 5,
-        "Pink Carpet (Itemsanity)": 5,
-        "Gray Carpet (Itemsanity)": 5,
-        "Light Gray Carpet (Itemsanity)": 5,
-        "Cyan Carpet (Itemsanity)": 5,
-        "Purple Carpet (Itemsanity)": 5,
-        "Blue Carpet (Itemsanity)": 5,
-        "Brown Carpet (Itemsanity)": 5,
-        "Red Carpet (Itemsanity)": 5,
         "Sunflower (Itemsanity)": 5,
         "Lilac (Itemsanity)": 5,
         "Rose Bush (Itemsanity)": 5,
@@ -219,32 +192,6 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Cut Red Sandstone (Itemsanity)": 5,
         "Red Sandstone Stairs (Itemsanity)": 5,
         "Bone Block (Itemsanity)": 5,
-        "White Concrete (Itemsanity)": 5,
-        "Orange Concrete (Itemsanity)": 5,
-        "Magenta Concrete (Itemsanity)": 5,
-        "Light Blue Concrete (Itemsanity)": 5,
-        "Yellow Concrete (Itemsanity)": 5,
-        "Pink Concrete (Itemsanity)": 5,
-        "Gray Concrete (Itemsanity)": 5,
-        "Light Gray Concrete (Itemsanity)": 5,
-        "Cyan Concrete (Itemsanity)": 5,
-        "Purple Concrete (Itemsanity)": 5,
-        "Blue Concrete (Itemsanity)": 5,
-        "Brown Concrete (Itemsanity)": 5,
-        "Red Concrete (Itemsanity)": 5,
-        "White Concrete Powder (Itemsanity)": 5,
-        "Orange Concrete Powder (Itemsanity)": 5,
-        "Magenta Concrete Powder (Itemsanity)": 5,
-        "Light Blue Concrete Powder (Itemsanity)": 5,
-        "Yellow Concrete Powder (Itemsanity)": 5,
-        "Pink Concrete Powder (Itemsanity)": 5,
-        "Gray Concrete Powder (Itemsanity)": 5,
-        "Light Gray Concrete Powder (Itemsanity)": 5,
-        "Cyan Concrete Powder (Itemsanity)": 5,
-        "Purple Concrete Powder (Itemsanity)": 5,
-        "Blue Concrete Powder (Itemsanity)": 5,
-        "Brown Concrete Powder (Itemsanity)": 5,
-        "Red Concrete Powder (Itemsanity)": 5,
         "Polished Granite Stairs (Itemsanity)": 5,
         "Polished Diorite Stairs (Itemsanity)": 5,
         "Granite Stairs (Itemsanity)": 5,
@@ -358,19 +305,6 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Book (Itemsanity)": 5,
         "Egg (Itemsanity)": 5,
         "Cocoa Beans (Itemsanity)": 5,
-        "White Dye (Itemsanity)": 5,
-        "Orange Dye (Itemsanity)": 5,
-        "Magenta Dye (Itemsanity)": 5,
-        "Light Blue Dye (Itemsanity)": 5,
-        "Yellow Dye (Itemsanity)": 5,
-        "Pink Dye (Itemsanity)": 5,
-        "Gray Dye (Itemsanity)": 5,
-        "Light Gray Dye (Itemsanity)": 5,
-        "Cyan Dye (Itemsanity)": 5,
-        "Purple Dye (Itemsanity)": 5,
-        "Blue Dye (Itemsanity)": 5,
-        "Brown Dye (Itemsanity)": 5,
-        "Red Dye (Itemsanity)": 5,
         "Bone Meal (Itemsanity)": 5,
         "Bone (Itemsanity)": 5,
         "Sugar (Itemsanity)": 5,
@@ -394,19 +328,6 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Rabbit Hide (Itemsanity)": 5,
         "Leather Horse Armor (Itemsanity)": 5,
         "Raw Mutton (Itemsanity)": 5,
-        "White Banner (Itemsanity)": 5,
-        "Orange Banner (Itemsanity)": 5,
-        "Magenta Banner (Itemsanity)": 5,
-        "Light Blue Banner (Itemsanity)": 5,
-        "Yellow Banner (Itemsanity)": 5,
-        "Pink Banner (Itemsanity)": 5,
-        "Gray Banner (Itemsanity)": 5,
-        "Light Gray Banner (Itemsanity)": 5,
-        "Cyan Banner (Itemsanity)": 5,
-        "Purple Banner (Itemsanity)": 5,
-        "Blue Banner (Itemsanity)": 5,
-        "Brown Banner (Itemsanity)": 5,
-        "Red Banner (Itemsanity)": 5,
         "Beetroot (Itemsanity)": 5,
         "Beetroot Seeds (Itemsanity)": 5,
         "Beetroot Soup (Itemsanity)": 5,
@@ -560,63 +481,7 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Smooth Basalt (Itemsanity)": 5,
         "Brick Wall (Itemsanity)": 5,
         "Stone Brick Wall (Itemsanity)": 5,
-        "White Terracotta (Itemsanity)": 5,
-        "Orange Terracotta (Itemsanity)": 5,
-        "Magenta Terracotta (Itemsanity)": 5,
-        "Light Blue Terracotta (Itemsanity)": 5,
-        "Yellow Terracotta (Itemsanity)": 5,
-        "Pink Terracotta (Itemsanity)": 5,
-        "Gray Terracotta (Itemsanity)": 5,
-        "Light Gray Terracotta (Itemsanity)": 5,
-        "Cyan Terracotta (Itemsanity)": 5,
-        "Purple Terracotta (Itemsanity)": 5,
-        "Blue Terracotta (Itemsanity)": 5,
-        "Brown Terracotta (Itemsanity)": 5,
-        "Green Terracotta (Itemsanity)": 5,
-        "Red Terracotta (Itemsanity)": 5,
         "Terracotta (Itemsanity)": 5,
-        "White Stained Glass (Itemsanity)": 5,
-        "Orange Stained Glass (Itemsanity)": 5,
-        "Magenta Stained Glass (Itemsanity)": 5,
-        "Light Blue Stained Glass (Itemsanity)": 5,
-        "Yellow Stained Glass (Itemsanity)": 5,
-        "Pink Stained Glass (Itemsanity)": 5,
-        "Gray Stained Glass (Itemsanity)": 5,
-        "Light Gray Stained Glass (Itemsanity)": 5,
-        "Cyan Stained Glass (Itemsanity)": 5,
-        "Purple Stained Glass (Itemsanity)": 5,
-        "Blue Stained Glass (Itemsanity)": 5,
-        "Brown Stained Glass (Itemsanity)": 5,
-        "Green Stained Glass (Itemsanity)": 5,
-        "Red Stained Glass (Itemsanity)": 5,
-        "White Stained Glass Pane (Itemsanity)": 5,
-        "Orange Stained Glass Pane (Itemsanity)": 5,
-        "Magenta Stained Glass Pane (Itemsanity)": 5,
-        "Light Blue Stained Glass Pane (Itemsanity)": 5,
-        "Yellow Stained Glass Pane (Itemsanity)": 5,
-        "Pink Stained Glass Pane (Itemsanity)": 5,
-        "Gray Stained Glass Pane (Itemsanity)": 5,
-        "Light Gray Stained Glass Pane (Itemsanity)": 5,
-        "Cyan Stained Glass Pane (Itemsanity)": 5,
-        "Purple Stained Glass Pane (Itemsanity)": 5,
-        "Blue Stained Glass Pane (Itemsanity)": 5,
-        "Brown Stained Glass Pane (Itemsanity)": 5,
-        "Green Stained Glass Pane (Itemsanity)": 5,
-        "Red Stained Glass Pane (Itemsanity)": 5,
-        "White Glazed Terracotta (Itemsanity)": 5,
-        "Orange Glazed Terracotta (Itemsanity)": 5,
-        "Magenta Glazed Terracotta (Itemsanity)": 5,
-        "Light Blue Glazed Terracotta (Itemsanity)": 5,
-        "Yellow Glazed Terracotta (Itemsanity)": 5,
-        "Pink Glazed Terracotta (Itemsanity)": 5,
-        "Gray Glazed Terracotta (Itemsanity)": 5,
-        "Light Gray Glazed Terracotta (Itemsanity)": 5,
-        "Cyan Glazed Terracotta (Itemsanity)": 5,
-        "Purple Glazed Terracotta (Itemsanity)": 5,
-        "Blue Glazed Terracotta (Itemsanity)": 5,
-        "Brown Glazed Terracotta (Itemsanity)": 5,
-        "Green Glazed Terracotta (Itemsanity)": 5,
-        "Red Glazed Terracotta (Itemsanity)": 5,
         "Stone Stairs (Itemsanity)": 5,
         "Smooth Sandstone Stairs (Itemsanity)": 5,
         "Smooth Red Sandstone Stairs (Itemsanity)": 5,
@@ -646,22 +511,6 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Smoker (Itemsanity)": 5,
         "Blast Furnace (Itemsanity)": 5,
         "Campfire (Itemsanity)": 5,
-        "Green Wool (Itemsanity)": 5,
-        "Green Carpet (Itemsanity)": 5,
-        "Green Concrete (Itemsanity)": 5,
-        "Green Concrete Powder (Itemsanity)": 5,
-        "Green Banner (Itemsanity)": 5,
-        "Green Dye (Itemsanity)": 5,
-        "Lime Glazed Terracotta (Itemsanity)": 5,
-        "Lime Stained Glass Pane (Itemsanity)": 5,
-        "Lime Stained Glass (Itemsanity)": 5,
-        "Lime Terracotta (Itemsanity)": 5,
-        "Lime Banner (Itemsanity)": 5,
-        "Lime Dye (Itemsanity)": 5,
-        "Lime Concrete Powder (Itemsanity)": 5,
-        "Lime Wool (Itemsanity)": 5,
-        "Lime Carpet (Itemsanity)": 5,
-        "Lime Concrete (Itemsanity)": 5,
         "Oak Hanging Sign (Itemsanity)": 5,
         "Spruce Hanging Sign (Itemsanity)": 5,
         "Birch Hanging Sign (Itemsanity)": 5,
@@ -805,6 +654,7 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
     # REQUIRES ENCHANTING
     create_region(world, "HasDiamondTools", "HasEnchanting", {
         "Grass Block (Itemsanity)": 5,
+        "Podzol (Itemsanity)": 5,
         "Coal Ore (Itemsanity)": 5,
         "Iron Ore (Itemsanity)": 5,
         "Deepslate Iron Ore (Itemsanity)": 5,
@@ -857,23 +707,6 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Brewing Stand (Itemsanity)": 5
     }, lambda state: canBrew(world, state))
 
-    # REQUIRES SLEEP
-    create_region(world, "Menu", "HasSleep", {
-        "White Bed (Itemsanity)": 5,
-        "Orange Bed (Itemsanity)": 5,
-        "Magenta Bed (Itemsanity)": 5,
-        "Light Blue Bed (Itemsanity)": 5,
-        "Yellow Bed (Itemsanity)": 5,
-        "Pink Bed (Itemsanity)": 5,
-        "Gray Bed (Itemsanity)": 5,
-        "Light Gray Bed (Itemsanity)": 5,
-        "Cyan Bed (Itemsanity)": 5,
-        "Purple Bed (Itemsanity)": 5,
-        "Blue Bed (Itemsanity)": 5,
-        "Brown Bed (Itemsanity)": 5,
-        "Red Bed (Itemsanity)": 5
-    }, lambda state: canSleep(world, state))
-
     # REQUIRES SPYGLASS
     create_region(world, "CanSmeltItems", "HasSpyglass", {
         "Spyglass (Itemsanity)": 5
@@ -889,19 +722,11 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
     # REQUIRES SWIMMING
     create_region(world, "Menu", "HasSwim", {
         "Sea Pickle (Itemsanity)": 5,
-        "Black Wool (Itemsanity)": 5,
         "Kelp (Itemsanity)": 5,
-        "Black Carpet (Itemsanity)": 5,
-        "Black Stained Glass (Itemsanity)": 5,
-        "Black Stained Glass Pane (Itemsanity)": 5,
-        "Black Concrete (Itemsanity)": 5,
-        "Black Concrete Powder (Itemsanity)": 5,
         "Ink Sac (Itemsanity)": 5,
         "Glow Ink Sac (Itemsanity)": 5,
-        "Black Dye (Itemsanity)": 5,
         "Book and Quill (Itemsanity)": 5,
         "Glow Item Frame (Itemsanity)": 5,
-        "Black Banner (Itemsanity)": 5,
         "Trident (Itemsanity)": 5,
         "Nautilus Shell (Itemsanity)": 5
     }, lambda state: canSwim(world, state))
@@ -943,22 +768,7 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Honeycomb (Itemsanity)": 5,
         "Beehive (Itemsanity)": 5,
         "Honeycomb Block (Itemsanity)": 5,
-        "Candle (Itemsanity)": 5,
-        "White Candle (Itemsanity)": 5,
-        "Orange Candle (Itemsanity)": 5,
-        "Magenta Candle (Itemsanity)": 5,
-        "Light Blue Candle (Itemsanity)": 5,
-        "Yellow Candle (Itemsanity)": 5,
-        "Lime Candle (Itemsanity)": 5,
-        "Pink Candle (Itemsanity)": 5,
-        "Gray Candle (Itemsanity)": 5,
-        "Light Gray Candle (Itemsanity)": 5,
-        "Cyan Candle (Itemsanity)": 5,
-        "Purple Candle (Itemsanity)": 5,
-        "Blue Candle (Itemsanity)": 5,
-        "Brown Candle (Itemsanity)": 5,
-        "Green Candle (Itemsanity)": 5,
-        "Red Candle (Itemsanity)": 5
+        "Candle (Itemsanity)": 5
     }, lambda state: canUseShears(world, state))
 
     # REQUIRES MISC CRAFTING
@@ -1010,14 +820,11 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
 
     # REQUIRES SWIMMING AND SHEARS
     create_region(world, "HasShears", "HasSwimAndShears", {
-        "Seagrass (Itemsanity)": 5,
-        "Black Candle (Itemsanity)": 5
+        "Seagrass (Itemsanity)": 5
     }, lambda state: canUseShears(world, state) and canSwim(world, state))
 
     # REQUIRES SWIMMING AND SMELTING
     create_region(world, "CanSmeltItems", "HasSwimAndSmelting", {
-        "Black Terracotta (Itemsanity)": 5,
-        "Black Glazed Terracotta (Itemsanity)": 5,
         "Dried Kelp Block (Itemsanity)": 5,
         "Dried Kelp (Itemsanity)": 5
     }, lambda state: canSmelt(world, state) and canSwim(world, state))
@@ -1211,28 +1018,8 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
 
     # REQUIRES CHESTS AND END ACCESS
     create_region(world, "EndAccess", "EndAccessAndChests", {
-        "Shulker Box (Itemsanity)": 5,
-        "White Shulker Box (Itemsanity)": 5,
-        "Orange Shulker Box (Itemsanity)": 5,
-        "Magenta Shulker Box (Itemsanity)": 5,
-        "Light Blue Shulker Box (Itemsanity)": 5,
-        "Yellow Shulker Box (Itemsanity)": 5,
-        "Lime Shulker Box (Itemsanity)": 5,
-        "Pink Shulker Box (Itemsanity)": 5,
-        "Gray Shulker Box (Itemsanity)": 5,
-        "Light Gray Shulker Box (Itemsanity)": 5,
-        "Cyan Shulker Box (Itemsanity)": 5,
-        "Purple Shulker Box (Itemsanity)": 5,
-        "Blue Shulker Box (Itemsanity)": 5,
-        "Brown Shulker Box (Itemsanity)": 5,
-        "Green Shulker Box (Itemsanity)": 5,
-        "Red Shulker Box (Itemsanity)": 5
+        "Shulker Box (Itemsanity)": 5
     }, lambda state: canAccessChests(world, state) and canAccessEnd(world, state))
-
-    # REQUIRES CHESTS AND END ACCESS AND SWIM
-    create_region(world, "EndAccessAndChests", "EndAccessAndChestsAndSwim", {
-        "Black Shulker Box (Itemsanity)": 5
-    }, lambda state: canAccessChests(world, state) and canAccessEnd(world, state) and canSwim(world, state))
 
     # REQUIRES CHESTS AND SMELTING
     create_region(world, "CanSmeltItems", "CanSmeltItemsAndUseChests", {
@@ -1272,21 +1059,308 @@ def create_vanilla_itemsanity_regions(world: FabricMinecraftWorld):
         "Cooked Salmon (Itemsanity)": 5
     }, lambda state: canSmelt(world, state) and (canSwim(world, state) or canUseFishingRod(world, state)))
 
-    # REQUIRES SLEEP AND SWIM
-    create_region(world, "HasSleep", "HasSleepAndSwim", {
-        "Black Bed (Itemsanity)": 5
-    }, lambda state: canSleep(world, state) and canSwim(world, state))
-
-    # REQUIRES SLEEP AND SMELT
-    create_region(world, "HasSleep", "HasSleepAndSmelt", {
-        "Green Bed (Itemsanity)": 5,
-        "Lime Bed (Itemsanity)": 5
-    }, lambda state: canSleep(world, state) and canSmelt(world, state))
-
     # REQUIRES SHEARS AND NETHER
     create_region(world, "NetherAccess", "NetherAccessAndShears", {
         "Nether Sprouts (Itemsanity)": 5
     }, lambda state: canAccessNether(world, state) and canUseShears(world, state))
+
+    # Regular Dye
+    create_region(world, "Menu", "RegularDye", {
+        "Red Wool (Itemsanity)": 5,
+        "Red Carpet (Itemsanity)": 5,
+        "Red Concrete (Itemsanity)": 5,
+        "Red Concrete Powder (Itemsanity)": 5,
+        "Red Dye (Itemsanity)": 5,
+        "Red Banner (Itemsanity)": 5,
+
+        "Yellow Wool (Itemsanity)": 5,
+        "Yellow Carpet (Itemsanity)": 5,
+        "Yellow Concrete (Itemsanity)": 5,
+        "Yellow Concrete Powder (Itemsanity)": 5,
+        "Yellow Dye (Itemsanity)": 5,
+        "Yellow Banner (Itemsanity)": 5,
+
+        "Blue Wool (Itemsanity)": 5,
+        "Blue Carpet (Itemsanity)": 5,
+        "Blue Concrete (Itemsanity)": 5,
+        "Blue Concrete Powder (Itemsanity)": 5,
+        "Blue Dye (Itemsanity)": 5,
+        "Blue Banner (Itemsanity)": 5,
+
+        "White Wool (Itemsanity)": 5,
+        "White Carpet (Itemsanity)": 5,
+        "White Concrete (Itemsanity)": 5,
+        "White Concrete Powder (Itemsanity)": 5,
+        "White Dye (Itemsanity)": 5,
+        "White Banner (Itemsanity)": 5
+    }, lambda state: canDyeBasic(world, state))
+
+    # Regular Dye and Smelt
+    create_region(world, "RegularDye", "RegularDyeAndSmelt", {
+        "Red Terracotta (Itemsanity)": 5,
+        "Red Stained Glass (Itemsanity)": 5,
+        "Red Stained Glass Pane (Itemsanity)": 5,
+        "Red Glazed Terracotta (Itemsanity)": 5,
+
+        "Yellow Terracotta (Itemsanity)": 5,
+        "Yellow Stained Glass (Itemsanity)": 5,
+        "Yellow Stained Glass Pane (Itemsanity)": 5,
+        "Yellow Glazed Terracotta (Itemsanity)": 5,
+
+        "Blue Terracotta (Itemsanity)": 5,
+        "Blue Stained Glass (Itemsanity)": 5,
+        "Blue Stained Glass Pane (Itemsanity)": 5,
+        "Blue Glazed Terracotta (Itemsanity)": 5,
+
+        "White Terracotta (Itemsanity)": 5,
+        "White Stained Glass (Itemsanity)": 5,
+        "White Stained Glass Pane (Itemsanity)": 5,
+        "White Glazed Terracotta (Itemsanity)": 5
+    }, lambda state: canDyeBasic(world, state) and canSmelt(world, state))
+
+    # Regular Dye and Shears
+    create_region(world, "RegularDye", "RegularDyeAndShears", {
+        "Red Candle (Itemsanity)": 5,
+        "Yellow Candle (Itemsanity)": 5,
+        "Blue Candle (Itemsanity)": 5,
+        "White Candle (Itemsanity)": 5
+    }, lambda state: canDyeBasic(world, state) and canUseShears(world, state))
+
+    # Regular Dye and Sleep
+    create_region(world, "RegularDye", "RegularDyeAndSleep", {
+        "Red Bed (Itemsanity)": 5,
+        "Yellow Bed (Itemsanity)": 5,
+        "Blue Bed (Itemsanity)": 5,
+        "White Bed (Itemsanity)": 5
+    }, lambda state: canDyeBasic(world, state) and canSleep(world, state))
+
+    # Regular Dye and End and Chests
+    create_region(world, "RegularDye", "RegularDyeAndShulker", {
+        "Red Shulker Box (Itemsanity)": 5,
+        "Yellow Shulker Box (Itemsanity)": 5,
+        "Blue Shulker Box (Itemsanity)": 5,
+        "White Shulker Box (Itemsanity)": 5
+    }, lambda state: canDyeBasic(world, state) and canAccessChests(world, state) and canAccessEnd(world, state))
+
+    # Black Dye
+    create_region(world, "RegularDye", "BlackDye", {
+        "Black Wool (Itemsanity)": 5,
+        "Black Carpet (Itemsanity)": 5,
+        "Black Concrete (Itemsanity)": 5,
+        "Black Concrete Powder (Itemsanity)": 5,
+        "Black Dye (Itemsanity)": 5,
+        "Black Banner (Itemsanity)": 5,
+
+        "Gray Wool (Itemsanity)": 5,
+        "Gray Carpet (Itemsanity)": 5,
+        "Gray Concrete (Itemsanity)": 5,
+        "Gray Concrete Powder (Itemsanity)": 5,
+        "Gray Dye (Itemsanity)": 5,
+        "Gray Banner (Itemsanity)": 5
+    }, lambda state: canDyeBlack(world, state))
+
+    # Black Dye and Smelt
+    create_region(world, "RegularDye", "BlackDyeAndSmelt", {
+        "Black Terracotta (Itemsanity)": 5,
+        "Black Stained Glass (Itemsanity)": 5,
+        "Black Stained Glass Pane (Itemsanity)": 5,
+        "Black Glazed Terracotta (Itemsanity)": 5,
+
+        "Gray Terracotta (Itemsanity)": 5,
+        "Gray Stained Glass (Itemsanity)": 5,
+        "Gray Stained Glass Pane (Itemsanity)": 5,
+        "Gray Glazed Terracotta (Itemsanity)": 5
+    }, lambda state: canDyeBlack(world, state) and canSmelt(world, state))
+
+    # Black Dye and Shears
+    create_region(world, "RegularDye", "BlackDyeAndShears", {
+        "Black Candle (Itemsanity)": 5,
+        "Gray Candle (Itemsanity)": 5
+    }, lambda state: canDyeBlack(world, state) and canUseShears(world, state))
+
+    # Black Dye and Sleep
+    create_region(world, "RegularDye", "BlackDyeAndSleep", {
+        "Black Bed (Itemsanity)": 5,
+        "Gray Bed (Itemsanity)": 5
+    }, lambda state: canDyeBlack(world, state) and canSleep(world, state))
+
+    # Black Dye and End and Chests
+    create_region(world, "RegularDye", "BlackDyeAndShulker", {
+        "Black Shulker Box (Itemsanity)": 5,
+        "Gray Shulker Box (Itemsanity)": 5
+    }, lambda state: canDyeBlack(world, state) and canAccessChests(world, state) and canAccessEnd(world, state))
+
+    # Green Dye and Smelt
+    create_region(world, "RegularDye", "GreenDyeAndSmelt", {
+        "Green Terracotta (Itemsanity)": 5,
+        "Green Stained Glass (Itemsanity)": 5,
+        "Green Stained Glass Pane (Itemsanity)": 5,
+        "Green Glazed Terracotta (Itemsanity)": 5,
+        "Green Wool (Itemsanity)": 5,
+        "Green Carpet (Itemsanity)": 5,
+        "Green Concrete (Itemsanity)": 5,
+        "Green Concrete Powder (Itemsanity)": 5,
+        "Green Dye (Itemsanity)": 5,
+        "Green Banner (Itemsanity)": 5
+    }, lambda state: canSmelt(world, state))
+
+    # Green Dye and Shears
+    create_region(world, "RegularDye", "GreenDyeAndShears", {
+        "Green Candle (Itemsanity)": 5
+    }, lambda state: canUseShears(world, state) and canSmelt(world, state))
+
+    # Green Dye and Sleep
+    create_region(world, "RegularDye", "GreenDyeAndSleep", {
+        "Green Bed (Itemsanity)": 5
+    }, lambda state: canSleep(world, state) and canSmelt(world, state))
+
+    # Green Dye and End and Chests
+    create_region(world, "RegularDye", "GreenDyeAndShulker", {
+        "Green Shulker Box (Itemsanity)": 5
+    }, lambda state: canAccessChests(world, state) and canAccessEnd(world, state) and canSmelt(world, state))
+
+    # Full Dye
+    create_region(world, "RegularDye", "FullDye", {
+        "Orange Wool (Itemsanity)": 5,
+        "Orange Carpet (Itemsanity)": 5,
+        "Orange Concrete (Itemsanity)": 5,
+        "Orange Concrete Powder (Itemsanity)": 5,
+        "Orange Dye (Itemsanity)": 5,
+        "Orange Banner (Itemsanity)": 5,
+
+        "Light Blue Wool (Itemsanity)": 5,
+        "Light Blue Carpet (Itemsanity)": 5,
+        "Light Blue Concrete (Itemsanity)": 5,
+        "Light Blue Concrete Powder (Itemsanity)": 5,
+        "Light Blue Dye (Itemsanity)": 5,
+        "Light Blue Banner (Itemsanity)": 5,
+
+        "Purple Wool (Itemsanity)": 5,
+        "Purple Carpet (Itemsanity)": 5,
+        "Purple Concrete (Itemsanity)": 5,
+        "Purple Concrete Powder (Itemsanity)": 5,
+        "Purple Dye (Itemsanity)": 5,
+        "Purple Banner (Itemsanity)": 5,
+
+        "Pink Wool (Itemsanity)": 5,
+        "Pink Carpet (Itemsanity)": 5,
+        "Pink Concrete (Itemsanity)": 5,
+        "Pink Concrete Powder (Itemsanity)": 5,
+        "Pink Dye (Itemsanity)": 5,
+        "Pink Banner (Itemsanity)": 5,
+
+        "Light Gray Wool (Itemsanity)": 5,
+        "Light Gray Carpet (Itemsanity)": 5,
+        "Light Gray Concrete (Itemsanity)": 5,
+        "Light Gray Concrete Powder (Itemsanity)": 5,
+        "Light Gray Dye (Itemsanity)": 5,
+        "Light Gray Banner (Itemsanity)": 5,
+
+        "Brown Wool (Itemsanity)": 5,
+        "Brown Carpet (Itemsanity)": 5,
+        "Brown Concrete (Itemsanity)": 5,
+        "Brown Concrete Powder (Itemsanity)": 5,
+        "Brown Dye (Itemsanity)": 5,
+        "Brown Banner (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state))
+
+    # Full Dye and Smelt
+    create_region(world, "RegularDye", "FullDyeAndSmelt", {
+        "Orange Terracotta (Itemsanity)": 5,
+        "Orange Stained Glass (Itemsanity)": 5,
+        "Orange Stained Glass Pane (Itemsanity)": 5,
+        "Orange Glazed Terracotta (Itemsanity)": 5,
+
+        "Light Blue Terracotta (Itemsanity)": 5,
+        "Light Blue Stained Glass (Itemsanity)": 5,
+        "Light Blue Stained Glass Pane (Itemsanity)": 5,
+        "Light Blue Glazed Terracotta (Itemsanity)": 5,
+
+        "Purple Terracotta (Itemsanity)": 5,
+        "Purple Stained Glass (Itemsanity)": 5,
+        "Purple Stained Glass Pane (Itemsanity)": 5,
+        "Purple Glazed Terracotta (Itemsanity)": 5,
+
+        "Light Gray Terracotta (Itemsanity)": 5,
+        "Light Gray Stained Glass (Itemsanity)": 5,
+        "Light Gray Stained Glass Pane (Itemsanity)": 5,
+        "Light Gray Glazed Terracotta (Itemsanity)": 5,
+
+        "Brown Terracotta (Itemsanity)": 5,
+        "Brown Stained Glass (Itemsanity)": 5,
+        "Brown Stained Glass Pane (Itemsanity)": 5,
+        "Brown Glazed Terracotta (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state) and canSmelt(world, state))
+
+    # Full Dye and Shears
+    create_region(world, "RegularDye", "FullDyeAndShears", {
+        "Orange Candle (Itemsanity)": 5,
+        "Light Blue Candle (Itemsanity)": 5,
+        "Purple Candle (Itemsanity)": 5,
+        "Light Gray Candle (Itemsanity)": 5,
+        "Brown Candle (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state) and canUseShears(world, state))
+
+    # Full Dye and Sleep
+    create_region(world, "RegularDye", "FullDyeAndSleep", {
+        "Orange Bed (Itemsanity)": 5,
+        "Light Blue Bed (Itemsanity)": 5,
+        "Purple Bed (Itemsanity)": 5,
+        "Light Gray Bed (Itemsanity)": 5,
+        "Brown Bed (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state) and canSleep(world, state))
+
+    # Full Dye and End and Chests
+    create_region(world, "RegularDye", "FullDyeAndShulker", {
+        "Orange Shulker Box (Itemsanity)": 5,
+        "Light Blue Shulker Box (Itemsanity)": 5,
+        "Purple Shulker Box (Itemsanity)": 5,
+        "Light Gray Shulker Box (Itemsanity)": 5,
+        "Brown Shulker Box (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state) and canAccessChests(world, state) and canAccessEnd(world, state))
+
+    # Lime and Cyan Dye and Smelt
+    create_region(world, "RegularDye", "LimeAndCyanDyeAndSmelt", {
+        "Lime Terracotta (Itemsanity)": 5,
+        "Lime Stained Glass (Itemsanity)": 5,
+        "Lime Stained Glass Pane (Itemsanity)": 5,
+        "Lime Glazed Terracotta (Itemsanity)": 5,
+        "Lime Wool (Itemsanity)": 5,
+        "Lime Carpet (Itemsanity)": 5,
+        "Lime Concrete (Itemsanity)": 5,
+        "Lime Concrete Powder (Itemsanity)": 5,
+        "Lime Dye (Itemsanity)": 5,
+        "Lime Banner (Itemsanity)": 5,
+
+        "Cyan Terracotta (Itemsanity)": 5,
+        "Cyan Stained Glass (Itemsanity)": 5,
+        "Cyan Stained Glass Pane (Itemsanity)": 5,
+        "Cyan Glazed Terracotta (Itemsanity)": 5,
+        "Cyan Wool (Itemsanity)": 5,
+        "Cyan Carpet (Itemsanity)": 5,
+        "Cyan Concrete (Itemsanity)": 5,
+        "Cyan Concrete Powder (Itemsanity)": 5,
+        "Cyan Dye (Itemsanity)": 5,
+        "Cyan Banner (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state) and canSmelt(world, state))
+
+    # Lime and Cyan Dye and Shears
+    create_region(world, "RegularDye", "LimeAndCyanDyeAndShears", {
+        "Lime Candle (Itemsanity)": 5,
+        "Cyan Candle (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state) and canUseShears(world, state) and canSmelt(world, state))
+
+    # Lime and Cyan Dye and Sleep
+    create_region(world, "RegularDye", "LimeAndCyanDyeAndSleep", {
+        "Lime Bed (Itemsanity)": 5,
+        "Cyan Bed (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state) and canSleep(world, state) and canSmelt(world, state))
+
+    # Lime and Cyan Dye and End and Chests
+    create_region(world, "RegularDye", "LimeAndCyanDyeAndShulker", {
+        "Lime Shulker Box (Itemsanity)": 5,
+        "Cyan Shulker Box (Itemsanity)": 5
+    }, lambda state: canDyeFull(world, state) and canAccessChests(world, state) and canAccessEnd(world, state) and canSmelt(world, state))
 
 
 def create_region(world: FabricMinecraftWorld, region_name: str, new_region_name: str, locations: dict[str, int], rule=None):

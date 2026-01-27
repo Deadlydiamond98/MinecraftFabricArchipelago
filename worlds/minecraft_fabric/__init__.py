@@ -32,23 +32,12 @@ class FabricMinecraftWorld(World):
         create_regions(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
-        # from Utils import visualize_regions
-        # state = self.multiworld.get_all_state()
-        # state.update_reachable_regions(self.player)
-        #
-        # reachable_regions = state.reachable_regions[self.player]
-        # unreachable_regions: set[Region] = set()  # type: ignore
-        # for regionb in self.multiworld.regions:
-        #     if regionb not in reachable_regions:
-        #         unreachable_regions.add(regionb)
-        #
-        # visualize_regions(self.get_region("Menu"), f"{self.player_name}_world.puml", show_entrance_names=True,
-        #                   regions_to_highlight=unreachable_regions)
+        self.create_puml(False)
 
         advancements = 0
 
         for location in self.multiworld.get_locations():
-            if not location.name.endswith("(Itemsanity)"):
+            if not location.name.endswith("(Itemsanity)") or location.name.endswith("(Killsanity)"):
                 advancements += 1
 
         return {
@@ -81,3 +70,20 @@ class FabricMinecraftWorld(World):
 
     def pre_fill(self) -> None:
         create_local_fill_items(self)
+
+
+    # Creates Puml for checking Logic
+    def create_puml(self, create: bool):
+        if create:
+            from Utils import visualize_regions
+            state = self.multiworld.get_all_state()
+            state.update_reachable_regions(self.player)
+
+            reachable_regions = state.reachable_regions[self.player]
+            unreachable_regions: set[Region] = set()  # type: ignore
+            for regionb in self.multiworld.regions:
+                if regionb not in reachable_regions:
+                    unreachable_regions.add(regionb)
+
+            visualize_regions(self.get_region("Menu"), f"{self.player_name}_world.puml", show_entrance_names=True,
+                              regions_to_highlight=unreachable_regions)

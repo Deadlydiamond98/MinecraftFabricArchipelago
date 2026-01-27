@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from worlds.minecraft_fabric.item.vanilla.vanilla_items import vanilla_items
+from worlds.minecraft_fabric.item.items.vanilla_items import vanilla_items
 
 
 ########################################################################################################################

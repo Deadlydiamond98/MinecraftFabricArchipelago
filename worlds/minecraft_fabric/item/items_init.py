@@ -21,6 +21,7 @@ def create_items(world: FabricMinecraftWorld):
 
     # Progression Items ############################################################################################
 
+    # Optional Progression Items
     if world.options.randomize_swim:
         total_items = add_item_to_pool(world, "Swim", total_items)
     if world.options.randomize_sprint:
@@ -30,14 +31,15 @@ def create_items(world: FabricMinecraftWorld):
     if world.options.randomize_chests:
         total_items = add_item_to_pool(world, "Chests & Barrels", total_items)
 
-    # Progressive Tools
+    # Progressive Progression Items
     total_items = add_items_to_pool(world, "Progressive Tools", 4, total_items)
     total_items = add_items_to_pool(world, "Progressive Weapons", 4, total_items)
     total_items = add_items_to_pool(world, "Progressive Smelting", 2, total_items)
     total_items = add_items_to_pool(world, "Progressive Armor", 5, total_items)
     total_items = add_items_to_pool(world, "Progressive Archery", 2, total_items)
+    total_items = add_items_to_pool(world, "Progressive Dye Recipes", 2, total_items)
 
-    # Single Check Progressive Items
+    # Single Check Progression Items
     progression_bl: list[ProcessedMinecraftItem] = get_progression_bl_items()
     for item in progression_bl:
         total_items = add_item_to_pool(world, item.name, total_items)

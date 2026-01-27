@@ -183,6 +183,15 @@ def canAccessVanillaEndGame(world: FabricMinecraftWorld, state: CollectionState)
             and canBeatDragonAndWither(world, state) and canUseDiamondTools(world, state))
             and canAccessChests(world, state))
 
+def canDyeBasic(world: FabricMinecraftWorld, state: CollectionState):
+    return state.has("Progressive Dye Recipes", world.player)
+
+def canDyeFull(world: FabricMinecraftWorld, state: CollectionState):
+    return state.has("Progressive Dye Recipes", world.player, 2)
+
+def canDyeBlack(world: FabricMinecraftWorld, state: CollectionState):
+    return canDyeBasic(world, state) and canSwim(world, state)
+
 # GOAL CHECKS ##########################################################################################################
 
 def canGoalEnderDragon(world: FabricMinecraftWorld, state: CollectionState):
