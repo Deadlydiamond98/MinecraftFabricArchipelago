@@ -43,7 +43,7 @@ def create_vanilla_advancement_regions(world: FabricMinecraftWorld):
         "Those Were the Days": 0,
         "Subspace Bubble": 0,
         "A Terrible Fortress": 0,
-        "Uneasy Alliance": 0,
+        "Uneasy Alliance": 1,
         "Spooky Scary Skeleton": 0,
         "Into Fire": 0,
         "The Power of Books": 0,
